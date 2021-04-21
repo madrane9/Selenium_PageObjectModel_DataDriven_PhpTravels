@@ -2,16 +2,23 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-21T13:45:07Z" name="Default suite" finished-at="2021-04-21T13:45:27Z" duration-ms="19989">
+  <suite started-at="2021-04-21T14:19:25Z" name="Default suite" finished-at="2021-04-21T14:19:44Z" duration-ms="19266">
     <groups>
     </groups>
-    <test started-at="2021-04-21T13:45:07Z" name="Default test" finished-at="2021-04-21T13:45:27Z" duration-ms="19989">
+    <test started-at="2021-04-21T14:19:25Z" name="Default test" finished-at="2021-04-21T14:19:44Z" duration-ms="19266">
       <class name="PHP_register.register_testcase">
-        <test-method is-config="true" signature="open_browser()[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:07Z" name="open_browser" finished-at="2021-04-21T13:45:11Z" duration-ms="3620" status="PASS">
+        <test-method is-config="true" signature="open_browser(java.lang.String)[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:25Z" name="open_browser" finished-at="2021-04-21T14:19:29Z" duration-ms="3918" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open_browser -->
-        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:12Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T13:45:20Z" duration-ms="8778" status="PASS">
+        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:30Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T14:19:38Z" duration-ms="8148" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +37,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Yasser001@gmail.com]]>
+                <![CDATA[Yasser005@gmail.com]]>
               </value>
             </param>
             <param index="4">
@@ -47,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register_firsttestcase -->
-        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:20Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T13:45:23Z" duration-ms="2331" status="PASS">
+        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:38Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T14:19:40Z" duration-ms="2202" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,7 +73,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Yasser002@gmail.com]]>
+                <![CDATA[Yasser006@gmail.com]]>
               </value>
             </param>
             <param index="4">
@@ -83,7 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register_firsttestcase -->
-        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:23Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T13:45:25Z" duration-ms="2396" status="PASS">
+        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:40Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T14:19:42Z" duration-ms="2137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -102,7 +109,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Yasser003@gmail.com]]>
+                <![CDATA[Yasser007@gmail.com]]>
               </value>
             </param>
             <param index="4">
@@ -119,7 +126,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register_firsttestcase -->
-        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:25Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T13:45:27Z" duration-ms="2302" status="PASS">
+        <test-method signature="register_firsttestcase(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:42Z" name="register_firsttestcase" data-provider="test_data" finished-at="2021-04-21T14:19:44Z" duration-ms="2048" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -138,7 +145,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Yasser004@gmail.com]]>
+                <![CDATA[Yasser008@gmail.com]]>
               </value>
             </param>
             <param index="4">
@@ -155,7 +162,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register_firsttestcase -->
-        <test-method is-config="true" signature="close_browser()[pri:0, instance:PHP_register.register_testcase@68567e20]" started-at="2021-04-21T13:45:27Z" name="close_browser" finished-at="2021-04-21T13:45:27Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="close_browser()[pri:0, instance:PHP_register.register_testcase@7c1e2a9e]" started-at="2021-04-21T14:19:44Z" name="close_browser" finished-at="2021-04-21T14:19:44Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->

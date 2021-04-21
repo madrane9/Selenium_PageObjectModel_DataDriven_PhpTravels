@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class register_testcase {
@@ -22,8 +23,9 @@ public class register_testcase {
 
 	@Test(dataProvider="test_data")  // hier tragen wir den Namen unserer methode der dataProvider
 	public void register_firsttestcase(String first_name, String last_name, String phone, String email, String password, String confirm ) {
-
-
+		//wir können hier eine ExpilicitWait aufbauen
+		WebDriverWait wait = new WebDriverWait (yasserdriver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("MY ACCOUNT")));
 		yasserdriver.findElement(By.xpath("//*[@id='dropdownCurrency']/i")).click();
 		yasserdriver.findElement(By.linkText("Sign Up")).click();
 		yasserdriver.findElement(By.name("firstname")).sendKeys(first_name);
@@ -39,8 +41,7 @@ public class register_testcase {
 		
 		submit_btn.click();
 		
-		//wir können hier eine ExpilicitWait aufbauen
-		WebDriverWait wait = new WebDriverWait (yasserdriver, 20);
+		
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/html/body/div/div[1]/div[1]/div/div/div[1]/div/div[2]/h3")));
 		
 		String welcome_mesage = yasserdriver.findElement(By.xpath("/html/body/div/div[1]/div[1]/div/div/div[1]/div/div[2]/h3")).getText();
@@ -54,19 +55,28 @@ public class register_testcase {
 	}
 
 	@BeforeClass
-	public void open_browser() {
+	@Parameters({"browser"})   //<<== Hier wird gesagt, dass Parameter im testng.xml eingelegt wurde.
+	public void open_browser(String browser) {
+		if (browser.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
+			// Cannot instantiate the type Webdriver, hence we have to put the reference
+			// variable (Chromedriver)
+			// Chromedriver is a Class which is implementing the WebDriver Interface.
+			yasserdriver = new ChromeDriver();
+			yasserdriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			yasserdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			yasserdriver.get("https://phptravels.net/");
+			yasserdriver.manage().window().maximize();
+		}
+		if (browser.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", ".\\drivers\\chromedriver.exe");
+			yasserdriver = new ChromeDriver();
+			yasserdriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			yasserdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			yasserdriver.get("https://phptravels.net/");
+			yasserdriver.manage().window().maximize();
+		}
 
-		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
-		// Cannot instantiate the type Webdriver, hence we have to put the reference
-		// variable (Chromedriver)
-		// Chromedriver is a Class which is implementing the WebDriver Interface.
-		yasserdriver = new ChromeDriver();
-		yasserdriver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
-		yasserdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		yasserdriver.get("https://phptravels.net/");
-		yasserdriver.manage().window().maximize();
-		
-		
 	}
 
 	@AfterClass
