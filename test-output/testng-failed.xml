@@ -6,6 +6,7 @@
       <class name="PHP_register.register_testcase">
         <methods>
           <include name="register_firsttestcase" invocation-numbers="0 1 2 3"/>
+          <include name="failed_screenshot"/>
           <include name="open_browser"/>
           <include name="close_browser"/>
         </methods>

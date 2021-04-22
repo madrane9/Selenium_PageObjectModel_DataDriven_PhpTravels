@@ -11,7 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -55,6 +57,19 @@ public class register_testcase {
 	}
 
 	@BeforeClass
+	public void open_browser() {
+	
+			System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
+			// Cannot instantiate the type Webdriver, hence we have to put the reference
+			// variable (Chromedriver)
+			// Chromedriver is a Class which is implementing the WebDriver Interface.
+			yasserdriver = new ChromeDriver();
+			yasserdriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			yasserdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			yasserdriver.get("https://phptravels.net/");
+			yasserdriver.manage().window().maximize();
+		}
+	 /*
 	@Parameters({"browser"})   //<<== Hier wird gesagt, dass Parameter im testng.xml eingelegt wurde.
 	public void open_browser(String browser) {
 		if (browser.equals("chrome")) {
@@ -77,6 +92,17 @@ public class register_testcase {
 			yasserdriver.manage().window().maximize();
 		}
 
+	}
+	*/
+	
+	@AfterMethod
+	//ITestResult is Interface for taking result: (see implementation for that)
+	// int SUCCESS = 1; int FAILURE = 2;
+	public void failed_screenshot(ITestResult Testcase_result) throws IOException {
+		if (Testcase_result.getStatus() == ITestResult.FAILURE)
+	screen_shot.take_screenshot(yasserdriver,".\\screenshots\\"+Testcase_result.getName()+".png");
+	System.out.println("ITestResult.FAILURE is" + ITestResult.FAILURE);
+	System.out.println("testcase_result.getStatus() is " + Testcase_result.getStatus());
 	}
 
 	@AfterClass
