@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="Default suite">
-  
-    <!-- Default suite -->
-  
-  <parameter name="browser"  value="chrome" />
+<parameter name="browser" value="chrome"/>
+
   <test name="Default test" verbose="2">
-
     <classes>
-   
-    <class name="PHP_register.register_testcase"/>
-   
+      <class name="tescases.register_testcases"/>
     </classes>
-    
-    </test>
-
-   <!-- Default suite -->
-  
-
-</suite> 
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

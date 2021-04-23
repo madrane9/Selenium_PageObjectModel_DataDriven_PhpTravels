@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PHP_register.register_testcase">
+      <class name="tescases.register_testcases">
         <methods>
-          <include name="register_firsttestcase" invocation-numbers="0 1 2 3"/>
-          <include name="failed_screenshot"/>
-          <include name="open_browser"/>
           <include name="close_browser"/>
+          <include name="open_browser"/>
+          <include name="register_firsttestcase" invocation-numbers="3"/>
         </methods>
-      </class> <!-- PHP_register.register_testcase -->
+      </class> <!-- tescases.register_testcases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
